@@ -92,10 +92,9 @@ header {
 .description {
     font-size: clamp(16px, 2.2vw, 14px);
     line-height: 1.5;
-    margin-top: clamp(0px, 1vh, 10px); /* Keep original positioning */
-    margin-bottom: 40px;
+    margin-top: -25px; /* Force it to move up */
+    margin-bottom: 28px;
     max-width: 90%;
-    /* Position unchanged */
 }
 
 .image-placeholder {
@@ -114,11 +113,10 @@ header {
     object-fit: cover;
 }
 
-/* Carousel Section */
 .carousel-container {
     position: relative;
     width: clamp(320px, 90%, 1647px);
-    margin: clamp(280px, 30vh, 350px) auto 0;
+    margin: clamp(130px, 12vh, 200px) auto 0; /* Raised even more */
     overflow: hidden;
 }
 
