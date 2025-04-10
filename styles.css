@@ -1,0 +1,239 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F2F2F2;
+    min-height: 200vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    z-index: 100;
+    flex-wrap: wrap;
+}
+
+.name {
+    font-family: Helvetica, sans-serif;
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: bold;
+    color: #2C59CA;
+    text-decoration: none;
+}
+
+.nav-link {
+    font-family: Helvetica, sans-serif;
+    font-size: clamp(14px, 1.8vw, 18px);
+    color: #2C59CA;
+    text-decoration: none;
+    margin-left: clamp(15px, 3vw, 30px);
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Portfolio Title Image */
+.portfolio-title-img {
+    display: block;
+    margin: clamp(60px, 10vh, 130px) auto clamp(30px, 8vh, 100px) auto;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(1px);
+    }
+}
+
+/* Text Sections */
+.subtitle, .email, .description {
+    font-family: Helvetica, sans-serif;
+    color: #2C59CA;
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    margin-left: clamp(20px, 5%, 66px);
+}
+
+.subtitle {
+    font-size: clamp(18px, 2.5vw, 24px);
+    font-weight: bold;
+    margin-top: clamp(20px, 5vh, 50px);
+    margin-bottom: 15px;
+}
+
+.email {
+    font-size: clamp(14px, 2vw, 19px);
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.description {
+    font-size: clamp(16px, 2.2vw, 22px);
+    line-height: 1.5;
+    margin-top: clamp(50px, 10vh, 200px);
+    margin-bottom: 40px;
+    max-width: 90%;
+}
+
+/* Image Placeholder */
+.image-placeholder {
+    width: clamp(300px, 50vw, 860px);
+    height: clamp(320px, 80vh, 870px);
+    position: absolute;
+    right: clamp(20px, 5%, 66px);
+    top: clamp(180px, 30vh, 140px);
+    z-index: -1;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Carousel Section */
+.carousel-container {
+    position: relative;
+    width: clamp(320px, 90%, 1647px);
+    margin: clamp(80px, 15vh, 150px) auto 0;
+    overflow: hidden;
+}
+
+.carousel-video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+/* Footer */
+.footer {
+    width: auto;
+    padding: 20px;
+    text-align: left;
+    z-index: 10;
+}
+
+.contact-details {
+    font-family: Helvetica, sans-serif;
+    font-size: clamp(20px, 3vw, 30px);
+    color: #2C59CA;
+    margin-top: clamp(30px, 6vh, 60px);
+    margin-left: clamp(20px, 5%, 55px);
+}
+
+.contact-details a {
+    color: #2C59CA;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* Projects Section */
+#projects {
+    margin-top: clamp(50px, 10vh, 100px);
+}
+
+/* Footer Links */
+.footer a {
+    color: #2C59CA;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .image-placeholder {
+        width: 70%;
+        height: auto;
+        right: 15%;
+        top: 200px;
+    }
+
+    .description {
+        margin-top: 50vh;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 5%;
+    }
+
+    .portfolio-title-img {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .image-placeholder {
+        width: 80%;
+        height: 50vh;
+        right: 10%;
+        top: 260px;
+    }
+
+    .description {
+        margin-top: 65vh;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-link {
+        margin: 10px 15px 0 0;
+    }
+
+    .portfolio-title-img {
+        max-width: 85%;
+        margin: 0 auto;
+        font-size: 50px;
+        word-break: break-word;
+        line-height: 1.1;
+    }
+
+    .image-placeholder {
+        position: relative;
+        width: 90%;
+        height: 300px;
+        margin: 0 auto;
+        top: 300px;
+    }
+
+    .subtitle {
+        margin-top: 20px;
+    }
+
+    .description {
+        margin-top: 350px;
+    }
+}
