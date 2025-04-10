@@ -219,3 +219,130 @@ header {
         margin-top: 30px;
     }
 }
+
+
+/* Dark theme variables */
+:root {
+  --light-bg: #F2F2F2;
+  
+  --dark-bg: #2C59CA;
+  --dark-text: #F2F2F2;
+  
+}
+
+/* Dark Mode Toggle */
+.theme-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-label {
+  display: block;
+  width: 60px;
+  height: 30px;
+  background-color: #2C59CA;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.toggle-switch {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-color: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: all 0.3s ease;
+}
+
+.toggle-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+}
+
+.toggle-icon.light {
+  right: 8px;
+  opacity: 0;
+}
+
+.toggle-icon.dark {
+  left: 8px;
+  opacity: 1;
+}
+
+.toggle-input:checked + .toggle-label {
+  background-color: #ff9cde;
+}
+
+.toggle-input:checked + .toggle-label .toggle-switch {
+  left: 32px;
+}
+
+.toggle-input:checked + .toggle-label .toggle-icon.light {
+  opacity: 1;
+}
+
+.toggle-input:checked + .toggle-label .toggle-icon.dark {
+  opacity: 0;
+}
+
+/* Dark mode styles when activated */
+body.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+body.dark-mode header {
+  background-color: var(--dark-bg);
+}
+
+body.dark-mode .name,
+body.dark-mode .nav-link,
+body.dark-mode .subtitle,
+body.dark-mode .email,
+body.dark-mode .description {
+  color: var(--dark-text);
+}
+
+body.dark-mode .contact-details,
+body.dark-mode .contact-details a {
+  color: var(--dark-text);
+}
+
+body.dark-mode .portfolio-title-img {
+    filter: hue-rotate(110deg) saturate(1.3) brightness(3.5);
+  }
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 576px) {
+  .theme-toggle {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .toggle-label {
+    width: 50px;
+    height: 26px;
+  }
+  
+  .toggle-switch {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .toggle-input:checked + .toggle-label .toggle-switch {
+    left: 26px;
+  }
+}
