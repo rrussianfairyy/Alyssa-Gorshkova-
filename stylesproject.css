@@ -101,9 +101,8 @@ header {
     position: absolute;
     right: 5%;
     z-index: -1;
-    /* Fixed positioning for second image */
-    top: auto; 
-    margin-top: 150px;
+    /* MODIFIED: Decreased this value to move image 2 up */
+    margin-top: -50px;
 }
 
 .image-placeholder img,
@@ -225,8 +224,8 @@ header {
         height: 55%;
         width: 30%;
         right: 5%;
-        /* Align with projects2-title */
-        margin-top: 150px;
+        /* MODIFIED: Decreased this value to move image 2 up */
+        margin-top: -467px;
     }
     
     .description {
