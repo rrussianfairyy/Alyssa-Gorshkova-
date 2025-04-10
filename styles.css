@@ -79,30 +79,30 @@ header {
 .subtitle {
     font-size: clamp(18px, 2.5vw, 18px);
     font-weight: bold;
-    margin-top: clamp(5px, 2vh, 20px);
+    margin-top: clamp(-60px, -8vh, -40px); /* Moved up significantly more */
     margin-bottom: 15px;
 }
 
 .email {
     font-size: clamp(14px, 2vw, 11px);
-    margin-top: 0px;
-    margin-bottom: 30px;
+    margin-top: 0px; /* Keep the same distance from subtitle */
+    margin-bottom: 20px; /* Keep this the same */
 }
 
 .description {
     font-size: clamp(16px, 2.2vw, 14px);
     line-height: 1.5;
-    margin-top: clamp(15px, 4vh, 50px);
+    margin-top: clamp(0px, 1vh, 10px); /* Maintain some spacing from email */
     margin-bottom: 40px;
     max-width: 90%;
 }
 
 .image-placeholder {
-    width: clamp(190px, 44vw, 830px);
-    height: 700px;
+    width: clamp(230px, 48vw, 930px);
+    height: 750px;
     position: absolute;
     right: clamp(20px, 5%, 66px);
-    top: clamp(140px, 20vh, 120px);
+    top: clamp(100px, 15vh, 90px);
     z-index: -1;
 }
 
@@ -174,6 +174,10 @@ header {
         margin-left: auto;
         margin-right: auto;
         z-index: 2; /* Ensure text is above other elements */
+    }
+    
+    .subtitle {
+        margin-top: 0; /* Reset for mobile */
     }
     
     .description {
