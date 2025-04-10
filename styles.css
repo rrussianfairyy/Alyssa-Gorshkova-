@@ -99,13 +99,14 @@ header {
 }
 
 .image-placeholder {
-    width: clamp(230px, 48vw, 930px);
-    height: 750px;
+    width: clamp(228px, 46.5vw, 910px); /* Reduced min, mid, and max */
+    height: 740px; /* Slightly reduced height */
     position: absolute;
-    right: clamp(20px, 5%, 66px);
-    top: clamp(100px, 15vh, 90px);
+    right: clamp(18px, 4.5%, 60px); /* Slightly more inward */
+    top: clamp(90px, 13vh, 85px); /* Raised slightly */
     z-index: -1;
 }
+
 
 .image-placeholder img {
     width: 100%;
