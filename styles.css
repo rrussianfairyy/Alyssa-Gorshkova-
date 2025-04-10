@@ -77,20 +77,20 @@ header {
 }
 
 .subtitle {
-    font-size: clamp(18px, 2.5vw, 24px);
+    font-size: clamp(18px, 2.5vw, 19px);
     font-weight: bold;
     margin-top: clamp(20px, 5vh, 50px);
     margin-bottom: 15px;
 }
 
 .email {
-    font-size: clamp(14px, 2vw, 19px);
+    font-size: clamp(14px, 2vw, 14px);
     margin-top: 10px;
     margin-bottom: 30px;
 }
 
 .description {
-    font-size: clamp(16px, 2.2vw, 22px);
+    font-size: clamp(16px, 2.2vw, 17px);
     line-height: 1.5;
     margin-top: clamp(50px, 10vh, 200px);
     margin-bottom: 40px;
