@@ -98,7 +98,7 @@ header {
 }
 
 .image-placeholder {
-    width: clamp(230px, 48vw, 930px);
+    width: clamp(225px, 47vw, 920px); /* Slightly decreased width */
     height: 750px;
     position: absolute;
     right: clamp(20px, 5%, 66px);
