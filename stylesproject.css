@@ -84,25 +84,26 @@ header {
 }
 
 /* Image Containers */
-.image-placeholder,
-.image-placeholder2 {
+.image-placeholder {
     width: 30%;
     height: auto;
     position: absolute;
     right: 5%;
     margin-top: -63px;
     z-index: -1;
-}
-
-.image-placeholder {
     top: 180px;
     height: 55%;
 }
 
 .image-placeholder2 {
-    top: 125%;
+    width: 30%;
     height: 55%;
-    margin-top: -440px;
+    position: absolute;
+    right: 5%;
+    z-index: -1;
+    /* Fixed positioning for second image */
+    top: auto; 
+    margin-top: 150px;
 }
 
 .image-placeholder img,
@@ -170,6 +171,20 @@ header {
     z-index: 10;
 }
 
+/* Project Section Wrapper */
+.project-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.project2-section {
+    position: relative;
+    width: 100%;
+    margin-top: 150px;
+    overflow: hidden;
+}
+
 /* --- Responsive Media Queries --- */
 
 /* Large tablets / small desktops */
@@ -206,11 +221,12 @@ header {
     
     .image-placeholder2 {
         position: absolute;
-        top: 125%;
+        top: auto;
         height: 55%;
         width: 30%;
         right: 5%;
-        margin-top: -440px;
+        /* Align with projects2-title */
+        margin-top: 150px;
     }
     
     .description {
@@ -271,6 +287,10 @@ header {
     /* Adjust second project title spacing */
     .projects2-title {
         margin-top: 50px;
+    }
+
+    .project2-section {
+        margin-top: 0;
     }
 
     .description2 {
