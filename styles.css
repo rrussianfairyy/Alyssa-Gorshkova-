@@ -99,11 +99,12 @@ header {
 
 /* Image Placeholder */
 .image-placeholder {
-    width: clamp(280px, 50vw, 840px); /* Slightly decreased width */
+   width: clamp(200px, 40vw, 700px); /* Further reduced width */
+    height: 800px; /* Increased height */
     height: 800px; /* Increased height */
     position: absolute;
     right: clamp(20px, 5%, 66px);
-    top: clamp(180px, 30vh, 140px);
+    top: clamp(140px, 25vh, 100px); /* Further reduced top value */
     z-index: -1;
 }
 
