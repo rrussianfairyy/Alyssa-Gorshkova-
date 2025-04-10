@@ -98,13 +98,14 @@ header {
 }
 
 .image-placeholder {
-    width: clamp(210px, 45vw, 910px); /* Further decreased width */
+    width: clamp(225px, 47vw, 920px); /* Slightly decreased width */
     height: 750px;
     position: absolute;
     right: clamp(20px, 5%, 66px);
     top: clamp(100px, 15vh, 90px);
     z-index: -1;
 }
+
 
 
 .image-placeholder img {
