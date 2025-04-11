@@ -193,6 +193,6 @@ header {
     margin-left: 0px; /* Space between links */
 }
 
-.contact-details a:hover {
+.contact-details a: hover {
     text-decoration: underline;
 }
