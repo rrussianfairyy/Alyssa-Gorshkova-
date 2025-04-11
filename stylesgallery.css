@@ -31,19 +31,18 @@ header {
 /* Customizable Header Text */
 .name {
     font-family: Helvetica, sans-serif;
-    font-size: 24px; /* You can change this */
+    font-size: clamp(18px, 2vw, 20px);
     font-weight: bold;
     color: #2C59CA;
     text-decoration: none;
 }
 
-/* Customizable Navigation */
 .nav-link {
     font-family: Helvetica, sans-serif;
-    font-size: 18px; /* You can change this */
+    font-size: clamp(14px, 1.8vw, 14px);
     color: #2C59CA;
     text-decoration: none;
-    margin-left: 30px; /* Spacing between links */
+    margin-left: clamp(15px, 3vw, 30px);
 }
 
 .nav-link:hover {
