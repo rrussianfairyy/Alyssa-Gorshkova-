@@ -12,7 +12,7 @@ body {
     width: 100%;
 }
 
-* Header */
+/* Header */
 header {
     position: fixed;
     top: 0;
@@ -24,7 +24,6 @@ header {
     align-items: center;
     padding: 20px 5%;
     z-index: 100;
-    flex-wrap: wrap;
 }
 
 .name {
@@ -43,9 +42,6 @@ header {
     margin-left: clamp(15px, 3vw, 30px);
 }
 
-.nav-link:hover {
-    text-decoration: underline;
-}
 .nav-link:hover {
     text-decoration: underline;
 }
