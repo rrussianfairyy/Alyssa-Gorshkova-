@@ -98,7 +98,7 @@ header {
 .description {
   font-size: clamp(16px, 2.2vw, 14px);
   line-height: 1.5;
-  margin-top: 150px; /* Increased space between email and description */
+  margin-top: 350px; /* Increased space between email and description */
   margin-bottom: 28px;
   max-width: 90%;
 }
