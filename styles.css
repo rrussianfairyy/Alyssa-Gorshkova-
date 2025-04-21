@@ -122,7 +122,7 @@ header {
 .carousel-container {
   position: relative;
   width: clamp(340px, 95%, 1700px);
-  margin: clamp(230px, 35vh, 300px) auto 0; /* Increased top margin slightly more */
+  margin: clamp(400px, 45vh, 480px) auto 0; /* Increased top margin for more space from image */
   overflow: hidden;
   z-index: 5;
 }
