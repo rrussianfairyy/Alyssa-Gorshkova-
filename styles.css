@@ -99,10 +99,10 @@ header {
 
 .image-placeholder {
   width: clamp(228px, 46.5vw, 910px);
-  height: 640px; /* Reduced height (was 740px) */
+  height: 600px; /* Further reduced height from 640px to 600px */
   position: absolute;
   right: clamp(18px, 4.5%, 60px);
-  top: clamp(180px, 22vh, 185px); /* Slightly adjusted top position */
+  top: clamp(260px, 30vh, 270px); /* Increased top position to lower the top edge */
   z-index: -1;
 }
 
@@ -110,7 +110,7 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center middle; /* Ensures we keep the bottom part of the image visible */
+  object-position: center top; /* Ensures the bottom part of the image remains visible */
 }
 
 .carousel-container {
