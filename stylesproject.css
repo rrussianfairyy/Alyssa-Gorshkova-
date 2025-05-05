@@ -24,6 +24,7 @@ header {
     align-items: center;
     padding: 20px 5%;
     z-index: 100;
+    flex-wrap: wrap; /* Added flex-wrap from gallery CSS */
 }
 
 .name {
@@ -313,7 +314,7 @@ header {
 
     .nav-link {
         font-size: 1rem;
-        margin-left: 20px;
+        margin-left: 15px; /* Updated to match gallery */
     }
 
     .projects-title,
@@ -355,20 +356,20 @@ header {
 /* Phones */
 @media screen and (max-width: 576px) {
     header {
-        /* FIXED: Changed from column to row to keep left alignment */
-        flex-direction: row; 
+        /* UPDATED: Keep as row and space-between to match gallery code */
+        flex-direction: row;
         padding: 15px 5%;
-        /* Keep justify-content: space-between to ensure name stays left, nav links stay right */
         justify-content: space-between;
+        flex-wrap: wrap; /* Added from gallery CSS */
     }
 
     .name {
-        margin-bottom: 0; /* Remove bottom margin that could affect alignment */
+        margin-bottom: 0;
     }
 
     .nav-link {
         margin-left: 15px;
-        margin-right: 0;
+        font-size: 16px; /* Match gallery mobile font size */
     }
 
     .projects-title,
