@@ -175,7 +175,7 @@ header {
   text-decoration: underline;
 }
 
-/* Media Queries - Fixed for proper mobile responsiveness */
+/* Media Queries - Updated for better mobile spacing */
 @media (max-width: 767px) {
   /* Mobile-only styling */
   .subtitle, .email, .description {
@@ -183,72 +183,92 @@ header {
       text-align: center;
       margin-left: auto;
       margin-right: auto;
-      width: 90%;
+      width: 95%; /* Increased from 90% to reduce side margins */
       z-index: 5;
   }
   
   .subtitle {
       top: auto;
-      margin-top: 30px;
+      margin-top: 20px; /* Reduced from 30px */
   }
   
   .email {
       top: auto;
-      margin-top: 15px;
-      margin-bottom: 60px;
+      margin-top: 10px; /* Reduced from 15px */
+      margin-bottom: 40px; /* Reduced from 60px */
   }
   
   .description {
-      max-width: 95%;
-      margin-bottom: 30px;
-      margin-top: 80px;
+      max-width: 100%; /* Increased from 95% */
+      margin-bottom: 20px; /* Reduced from 30px */
+      margin-top: 60px; /* Reduced from 80px */
   }
   
   .image-placeholder {
       position: relative;
-      width: 90%;
-      height: 400px;
-      margin: 30px auto;
+      width: 95%; /* Increased from 90% */
+      height: 380px; /* Slightly reduced from 400px */
+      margin: 20px auto; /* Reduced from 30px */
       right: auto;
       top: 0;
       z-index: 1;
   }
   
   .carousel-container {
-      margin-top: 30px;
+      width: 98%; /* Increased from 95% */
+      margin-top: 20px; /* Reduced from 30px */
+      margin-left: auto;
+      margin-right: auto;
   }
   
   .portfolio-title-img {
-      margin-top: 90px;
-      margin-bottom: 20px;
+      margin-top: 80px; /* Reduced from 90px */
+      margin-bottom: 15px; /* Reduced from 20px */
+      width: 98%; /* Increased from default */
   }
   
   .contact-details {
-      margin-top: 80px;
+      margin-top: 60px; /* Reduced from 80px */
       text-align: center;
       margin-left: auto;
       margin-right: auto;
-      width: 90%;
+      width: 95%; /* Increased from 90% */
+  }
+  
+  .footer {
+      padding: 15px; /* Reduced from 20px */
+      margin-top: 60px; /* Reduced from 100px */
+  }
+  
+  #projects {
+      margin-top: 80px; /* Reduced from larger value */
   }
 }
 
 /* Very small screens */
 @media (max-width: 480px) {
   .image-placeholder {
-      height: 300px;
+      height: 270px; /* Reduced from 300px */
+      width: 98%; /* Increased from 90% */
   }
   
   .carousel-container {
-      margin-top: 20px;
+      margin-top: 15px; /* Reduced from 20px */
+      width: 100%; /* Take full width */
   }
   
   header {
       flex-direction: column;
       align-items: center;
+      padding: 15px 3%; /* Reduced padding */
   }
   
   .nav-link {
-      margin: 10px 8px;
+      margin: 8px 6px; /* Reduced from 10px 8px */
+  }
+  
+  .subtitle, .email, .description, .contact-details {
+      width: 98%; /* Increased width to reduce side margins */
   }
 }
 
@@ -353,7 +373,8 @@ body.dark-mode .contact-details a {
 body.dark-mode .portfolio-title-img {
   filter: hue-rotate(110deg) saturate(1.3) brightness(3.5);
 } 
-/* Additional media queries for responsiveness */
+
+/* Dark mode toggle for smaller screens */
 @media screen and (max-width: 576px) {
   .theme-toggle {
       bottom: 20px;
