@@ -180,8 +180,8 @@ header {
   /* Mobile-only styling */
   .subtitle, .email, .description {
       position: relative;
-      text-align: center;
-      margin-left: auto;
+      text-align: left; /* Changed from center to left */
+      margin-left: 20px; /* Fixed left margin instead of auto */
       margin-right: auto;
       width: 95%; /* Increased from 90% to reduce side margins */
       z-index: 5;
@@ -189,36 +189,38 @@ header {
   
   .subtitle {
       top: auto;
-      margin-top: 20px; /* Reduced from 30px */
+      margin-top: 15px; /* Further reduced from 20px */
+      margin-left: 10px; /* Consistent left margin */
   }
   
   .email {
       top: auto;
-      margin-top: 10px; /* Reduced from 15px */
-      margin-bottom: 40px; /* Reduced from 60px */
+      margin-top: 8px; /* Further reduced from 10px */
+      margin-bottom: 30px; /* Further reduced from 40px */
+      margin-left: 10px; /* Consistent left margin */
   }
   
   .description {
-      max-width: 100%; /* Increased from 95% */
-      margin-bottom: 20px; /* Reduced from 30px */
-      margin-top: 60px; /* Reduced from 80px */
+      max-width: 100%; /* Full width */
+      margin-bottom: 15px; /* Further reduced margin */
+      margin-top: 40px; /* Further reduced margin */
+      margin-left: 10px; /* Consistent left margin */
   }
   
   .image-placeholder {
       position: relative;
-      width: 95%; /* Increased from 90% */
-      height: 380px; /* Slightly reduced from 400px */
-      margin: 20px auto; /* Reduced from 30px */
+      width: 98%; /* Increased from 95% */
+      height: 360px; /* Further reduced height */
+      margin: 15px auto 15px 10px; /* Reduced margin and shifted left */
       right: auto;
       top: 0;
       z-index: 1;
   }
   
   .carousel-container {
-      width: 98%; /* Increased from 95% */
-      margin-top: 20px; /* Reduced from 30px */
-      margin-left: auto;
-      margin-right: auto;
+      width: 100%; /* Take full width */
+      margin: 10px auto 0 10px; /* Reduced top margin and shifted left */
+      padding-right: 10px; /* Add padding to account for left shift */
   }
   
   .portfolio-title-img {
@@ -228,20 +230,22 @@ header {
   }
   
   .contact-details {
-      margin-top: 60px; /* Reduced from 80px */
-      text-align: center;
-      margin-left: auto;
+      margin-top: 40px; /* Further reduced from 60px */
+      text-align: left;
+      margin-left: 10px; /* Consistent left margin */
       margin-right: auto;
-      width: 95%; /* Increased from 90% */
+      width: 98%; /* Increased from 95% */
   }
   
   .footer {
-      padding: 15px; /* Reduced from 20px */
-      margin-top: 60px; /* Reduced from 100px */
+      padding: 10px; /* Further reduced padding */
+      margin-top: 40px; /* Further reduced top margin */
+      margin-left: 10px; /* Align with other elements */
   }
   
   #projects {
-      margin-top: 80px; /* Reduced from larger value */
+      margin-top: 50px; /* Further reduced from 80px */
+      margin-left: 10px; /* Align with other elements */
   }
 }
 
@@ -268,7 +272,9 @@ header {
   }
   
   .subtitle, .email, .description, .contact-details {
-      width: 98%; /* Increased width to reduce side margins */
+      width: 98%; /* Increased width */
+      margin-left: 10px; /* Even smaller left margin */
+      text-align: left; /* Ensure text alignment is consistent */
   }
 }
 
