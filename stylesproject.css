@@ -355,17 +355,20 @@ header {
 /* Phones */
 @media screen and (max-width: 576px) {
     header {
-        flex-direction: column;
+        /* FIXED: Changed from column to row to keep left alignment */
+        flex-direction: row; 
         padding: 15px 5%;
+        /* Keep justify-content: space-between to ensure name stays left, nav links stay right */
+        justify-content: space-between;
     }
 
     .name {
-        margin-bottom: 10px;
+        margin-bottom: 0; /* Remove bottom margin that could affect alignment */
     }
 
     .nav-link {
         margin-left: 15px;
-        margin-right: 15px;
+        margin-right: 0;
     }
 
     .projects-title,
