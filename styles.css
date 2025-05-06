@@ -100,7 +100,8 @@ header {
   line-height: 1.5;
   margin-top: 350px;
   margin-bottom: 28px;
-  max-width: 90%;
+  /* max-width: 40vw; */
+  max-width: clamp(24ch,40vw,60ch); 
 }
 
 /* Image placeholder */
@@ -189,38 +190,37 @@ header {
   
   .subtitle {
       top: auto;
-      margin-top: 15px; /* Further reduced from 20px */
-      margin-left: 10px; /* Consistent left margin */
+      margin-top: 20px; /* Reduced from 30px */
   }
   
   .email {
       top: auto;
-      margin-top: 8px; /* Further reduced from 10px */
-      margin-bottom: 30px; /* Further reduced from 40px */
-      margin-left: 10px; /* Consistent left margin */
+      margin-top: 10px; /* Reduced from 15px */
+      margin-bottom: 40px; /* Reduced from 60px */
   }
   
   .description {
-      max-width: 100%; /* Full width */
-      margin-bottom: 15px; /* Further reduced margin */
-      margin-top: 40px; /* Further reduced margin */
-      margin-left: 10px; /* Consistent left margin */
+      /* max-width: 100%; Increased from 95% */
+      max-width: clamp(24ch,75vw,60ch); 
+      margin-bottom: 20px; /* Reduced from 30px */
+      margin-top: 60px; /* Reduced from 80px */
   }
   
   .image-placeholder {
       position: relative;
-      width: 98%; /* Increased from 95% */
-      height: 360px; /* Further reduced height */
-      margin: 15px auto 15px 10px; /* Reduced margin and shifted left */
+      width: 95%; /* Increased from 90% */
+      height: 380px; /* Slightly reduced from 400px */
+      margin: 20px auto; /* Reduced from 30px */
       right: auto;
       top: 0;
       z-index: 1;
   }
   
   .carousel-container {
-      width: 100%; /* Take full width */
-      margin: 10px auto 0 10px; /* Reduced top margin and shifted left */
-      padding-right: 10px; /* Add padding to account for left shift */
+      width: 98%; /* Increased from 95% */
+      margin-top: 20px; /* Reduced from 30px */
+      margin-left: auto;
+      margin-right: auto;
   }
   
   .portfolio-title-img {
@@ -230,22 +230,20 @@ header {
   }
   
   .contact-details {
-      margin-top: 40px; /* Further reduced from 60px */
-      text-align: left;
-      margin-left: 10px; /* Consistent left margin */
+      margin-top: 60px; /* Reduced from 80px */
+      text-align: left; /* Changed from center to left */
+      margin-left: 20px; /* Fixed left margin instead of auto */
       margin-right: auto;
-      width: 98%; /* Increased from 95% */
+      width: 95%; /* Increased from 90% */
   }
   
   .footer {
-      padding: 10px; /* Further reduced padding */
-      margin-top: 40px; /* Further reduced top margin */
-      margin-left: 10px; /* Align with other elements */
+      padding: 15px; /* Reduced from 20px */
+      margin-top: 60px; /* Reduced from 100px */
   }
   
   #projects {
-      margin-top: 50px; /* Further reduced from 80px */
-      margin-left: 10px; /* Align with other elements */
+      margin-top: 80px; /* Reduced from larger value */
   }
 }
 
@@ -272,8 +270,8 @@ header {
   }
   
   .subtitle, .email, .description, .contact-details {
-      width: 98%; /* Increased width */
-      margin-left: 10px; /* Even smaller left margin */
+      width: 95%; /* Set consistent width */
+      margin-left: 15px; /* Even smaller margin on very small screens */
       text-align: left; /* Ensure text alignment is consistent */
   }
 }
