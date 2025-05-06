@@ -1,124 +1,401 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alyssa Gorshkova - Portfolio</title>
-    <!-- Favicon Link -->
-    <link rel="icon" href="favicon/favicon.jpg" type="image/jpg">
-    <link rel="stylesheet" href="styles.css">
-    <script>
-        // Check if we came directly to this page or from the loading page
-        if (!sessionStorage.getItem("loadedIndex")) {
-            // Set a flag in sessionStorage to prevent redirect loops
-            sessionStorage.setItem("loadingRedirect", "true");
-            // Redirect to loading.html
-            window.location.href = "loading.html?page=index.html";
-        }
-    </script>
-</head>
-<body>
-    <header>
-        <a class="name" href="index.html">ALYSSA GORSHKOVA</a>
-        <nav>
-            <a class="nav-link" href="projects.html">Projects</a>
-            <a class="nav-link" href="gallery.html">Gallery</a>
-        </nav>
-    </header>
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    <!-- Main Content -->
-    <main>
-        <img class="portfolio-title-img" src="img/png.png" alt="Portfolio">
-        
-        <div class="subtitle">Graphic Designer & Web Developer</div>
-        <div class="email">alyssagorsh13@gmail.com</div>
-        <p class="description">
-            Hey there! I'm Alyssa Gorshkova, a second-year Design & Digital Media 
-            student at Whitecliffe College of Arts and Design. I'm all about exploring 
-            different facets of design—whether it's graphic design, web development, 
-            motion graphics, or 3D design, I love experimenting and pushing boundaries. I don't like to limit myself to just one thing because, well, why not be a 
-            jack of all trades, right? Creativity has no boundaries, and I enjoy learning 
-            and mastering whatever catches my interest. If you're looking for someone 
-            who's passionate, versatile, and always up for a challenge, I think I'd be
-            a perfect fit for your team. Let's create something
-            amazing together! xoxo
-        </p>
-            
-        <!-- Right-aligned Image from the Internet -->
-        <div class="image-placeholder">
-            <img src="https://i.pinimg.com/736x/79/45/d2/7945d2334a3271829125a6d7f67029ba.jpg" alt="Image description">
-        </div>
-    </main>
+body {
+  background-color: #F2F2F2;
+  min-height: 250vh;
+  position: relative;
+  overflow-x: hidden;
+}
 
-    <!-- Projects Section -->
-    <div id="projects">
-        <!-- Carousel with one looping video -->
-        <div class="carousel-container">
-            <video class="carousel-video" autoplay loop muted>
-                <source src="myvideo.mp4/Comp 1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </div>
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #F2F2F2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  z-index: 100;
+  flex-wrap: wrap;
+}
 
-    <script src="scriptgallery.js"></script>
+.name {
+  font-family: Helvetica, sans-serif;
+  font-size: clamp(18px, 2vw, 20px);
+  font-weight: bold;
+  color: #2C59CA;
+  text-decoration: none;
+}
 
-    <!-- Footer Section with Contact Details -->
-    <footer class="footer">
-        <div class="contact-details">
-            <p>Email: alyssagorsh13@gmail.com</p>
-            <p><a href="https://www.linkedin.com/in/alyssa-gorshkova-7945332ab/" target="_blank">LinkedIn</a></p>
-            <p><a href="https://www.instagram.com/alyssadesignz/" target="_blank">Instagram</a></p>
-            <p><a href="https://www.behance.net/alyssagorshkova" target="_blank">Behance</a></p>
-            <p><a href="https://github.com/alyssagorshkova" target="_blank">GitHub</a></p>
-        </div>
-    </footer>
+.nav-link {
+  font-family: Helvetica, sans-serif;
+  font-size: clamp(14px, 1.8vw, 14px);
+  color: #2C59CA;
+  text-decoration: none;
+  margin-left: clamp(15px, 3vw, 30px);
+}
 
-    <!-- Theme Toggle -->
-    <div class="theme-toggle">
-        <input type="checkbox" id="darkModeToggle" class="toggle-input">
-        <label for="darkModeToggle" class="toggle-label">
-            <span class="toggle-icon light">☀️</span>
-            <span class="toggle-icon dark">🌙</span>
-            <span class="toggle-switch"></span>
-        </label>
-    </div>
+.nav-link:hover {
+  text-decoration: underline;
+}
 
-    <script>
-        // Clear the sessionStorage flag when the page is about to be unloaded
-        window.addEventListener('beforeunload', function() {
-            sessionStorage.removeItem("loadedIndex");
-        });
+/* Portfolio Title Image */
+.portfolio-title-img {
+  display: block;
+  margin: clamp(100px, 12vh, 150px) auto clamp(20px, 5vh, 40px) auto;
+  max-width: 100%;
+  width: calc(100% - 20px);
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+  position: relative;
+  z-index: 5;
+}
 
-        // Get the toggle checkbox for dark mode
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        
-        // Check if user preference exists in localStorage
-        if (localStorage.getItem('darkMode') === 'enabled') {
-            document.body.classList.add('dark-mode');
-            darkModeToggle.checked = true;
-        }
-        
-        // Listen for changes on the toggle switch to enable/disable dark mode
-        darkModeToggle.addEventListener('change', function() {
-            if (this.checked) {
-                // Enable Dark Mode
-                document.body.classList.add('dark-mode');
-                localStorage.setItem('darkMode', 'enabled');
-            } else {
-                // Disable Dark Mode
-                document.body.classList.remove('dark-mode');
-                localStorage.setItem('darkMode', 'disabled');
-            }
-        });
-        
-        // Ensure dark mode is applied on page load based on previous user preference
-        document.addEventListener('DOMContentLoaded', function() {
-            if (localStorage.getItem('darkMode') === 'enabled') {
-                document.body.classList.add('dark-mode');
-                darkModeToggle.checked = true;
-            }
-        });
-    </script>
-</body>
-</html>
+@keyframes float {
+  0%, 100% {
+      transform: translateY(-10px);
+  }
+  50% {
+      transform: translateY(1px);
+  }
+}
+
+/* Text Sections */
+.subtitle, .email, .description {
+  font-family: Helvetica, sans-serif;
+  color: #2C59CA;
+  position: relative;
+  z-index: 5;
+  text-align: left;
+  margin-left: clamp(20px, 5%, 66px);
+}
+
+.subtitle {
+  font-size: clamp(18px, 2.5vw, 18px);
+  font-weight: bold;
+  position: absolute;
+  top: clamp(350px, 40vh, 450px);
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.email {
+  font-size: clamp(14px, 2vw, 11px);
+  position: absolute;
+  top: calc(clamp(350px, 40vh, 450px) + 40px);
+  margin-top: 0;
+  margin-bottom: 100px;
+}
+
+.description {
+  font-size: clamp(16px, 2.2vw, 14px);
+  line-height: 1.5;
+  margin-top: 350px;
+  margin-bottom: 28px;
+  /* max-width: 40vw; */
+  max-width: clamp(24ch,40vw,60ch); 
+}
+
+/* Image placeholder */
+.image-placeholder {
+  width: clamp(228px, 46.5vw, 910px);
+  height: 740px;
+  position: absolute;
+  right: clamp(18px, 4.5%, 60px);
+  top: clamp(350px, 40vh, 450px);
+  z-index: 1;
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top; /* or adjust as needed */
+}
+
+.carousel-container {
+  position: relative;
+  width: clamp(340px, 95%, 1700px);
+  margin: clamp(280px, 31vh, 360px) auto 0; /* Further reduced top margin */
+  overflow: hidden;
+  z-index: 5;
+}
+
+.carousel-video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+/* Footer */
+.footer {
+  width: auto;
+  padding: 20px;
+  text-align: left;
+  z-index: 10;
+  margin-top: 100px;
+}
+
+.contact-details {
+  font-family: Helvetica, sans-serif;
+  font-size: clamp(20px, 3vw, 30px);
+  color: #2C59CA;
+  margin-top: clamp(120px, 20vh, 180px);
+  margin-left: clamp(20px, 5%, 55px);
+}
+
+.contact-details a {
+  color: #2C59CA;
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+/* Projects Section */
+#projects {
+  margin-top: clamp(150px, 25vh, 220px);
+}
+
+/* Footer Links */
+.footer a {
+  color: #2C59CA;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries - Updated for better mobile spacing */
+@media (max-width: 767px) {
+  /* Mobile-only styling */
+  .subtitle, .email, .description {
+      position: relative;
+      text-align: left; /* Changed from center to left */
+      margin-left: 20px; /* Fixed left margin instead of auto */
+      margin-right: auto;
+      width: 95%; /* Increased from 90% to reduce side margins */
+      z-index: 5;
+  }
+  
+  .subtitle {
+      top: auto;
+      margin-top: 20px; /* Reduced from 30px */
+  }
+  
+  .email {
+      top: auto;
+      margin-top: 10px; /* Reduced from 15px */
+      margin-bottom: 40px; /* Reduced from 60px */
+  }
+  
+  .description {
+      /* max-width: 100%; Increased from 95% */
+      max-width: clamp(24ch,75vw,60ch); 
+      margin-bottom: 20px; /* Reduced from 30px */
+      margin-top: 60px; /* Reduced from 80px */
+  }
+  
+  .image-placeholder {
+      position: relative;
+      width: 95%; /* Increased from 90% */
+      height: 380px; /* Slightly reduced from 400px */
+      margin: 20px auto; /* Reduced from 30px */
+      right: auto;
+      top: 0;
+      z-index: 1;
+  }
+  
+  .carousel-container {
+      width: 98%; /* Increased from 95% */
+      margin-top: 20px; /* Reduced from 30px */
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  .portfolio-title-img {
+      margin-top: 80px; /* Reduced from 90px */
+      margin-bottom: 15px; /* Reduced from 20px */
+      width: 98%; /* Increased from default */
+  }
+  
+  .contact-details {
+      margin-top: 60px; /* Reduced from 80px */
+      text-align: left; /* Changed from center to left */
+      margin-left: 20px; /* Fixed left margin instead of auto */
+      margin-right: auto;
+      width: 95%; /* Increased from 90% */
+  }
+  
+  .footer {
+      padding: 15px; /* Reduced from 20px */
+      margin-top: 60px; /* Reduced from 100px */
+  }
+  
+  #projects {
+      margin-top: 80px; /* Reduced from larger value */
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .image-placeholder {
+      height: 270px; /* Reduced from 300px */
+      width: 98%; /* Increased from 90% */
+  }
+  
+  .carousel-container {
+      margin-top: 15px; /* Reduced from 20px */
+      width: 100%; /* Take full width */
+  }
+  
+  header {
+      flex-direction: column;
+      align-items: center;
+      padding: 15px 3%; /* Reduced padding */
+  }
+  
+  .nav-link {
+      margin: 8px 6px; /* Reduced from 10px 8px */
+  }
+  
+  .subtitle, .email, .description, .contact-details {
+      width: 95%; /* Set consistent width */
+      margin-left: 15px; /* Even smaller margin on very small screens */
+      text-align: left; /* Ensure text alignment is consistent */
+  }
+}
+
+/* Dark theme variables */
+:root {
+  --light-bg: #F2F2F2;
+  --dark-bg: #2C59CA;
+  --dark-text: #F2F2F2;
+}
+
+/* Dark Mode Toggle */
+.theme-toggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-label {
+  display: block;
+  width: 60px;
+  height: 30px;
+  background-color: #2C59CA;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.toggle-switch {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-color: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: all 0.3s ease;
+}
+
+.toggle-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+}
+
+.toggle-icon.light {
+  right: 8px;
+  opacity: 0;
+}
+
+.toggle-icon.dark {
+  left: 8px;
+  opacity: 1;
+}
+
+.toggle-input:checked + .toggle-label {
+  background-color: #ff9cde;
+}
+
+.toggle-input:checked + .toggle-label .toggle-switch {
+  left: 32px;
+}
+
+.toggle-input:checked + .toggle-label .toggle-icon.light {
+  opacity: 1;
+}
+
+.toggle-input:checked + .toggle-label .toggle-icon.dark {
+  opacity: 0;
+}
+
+/* Dark mode styles when activated */
+body.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+body.dark-mode header {
+  background-color: var(--dark-bg);
+}
+
+body.dark-mode .name,
+body.dark-mode .nav-link,
+body.dark-mode .subtitle,
+body.dark-mode .email,
+body.dark-mode .description {
+  color: var(--dark-text);
+}
+
+body.dark-mode .contact-details,
+body.dark-mode .contact-details a {
+  color: var(--dark-text);
+}
+
+body.dark-mode .portfolio-title-img {
+  filter: hue-rotate(110deg) saturate(1.3) brightness(3.5);
+} 
+
+/* Dark mode toggle for smaller screens */
+@media screen and (max-width: 576px) {
+  .theme-toggle {
+      bottom: 20px;
+      right: 20px;
+  }
+  
+  .toggle-label {
+      width: 50px;
+      height: 26px;
+  }
+  
+  .toggle-switch {
+      width: 22px;
+      height: 22px;
+  }
+  
+  .toggle-input:checked + .toggle-label .toggle-switch {
+      left: 26px;
+  }
+}
